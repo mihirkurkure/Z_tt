@@ -50,6 +50,7 @@ void nsig_copy()
    Float_t memu;
    Float_t dlrm1e1;
    Float_t nnej;
+   Float_t met4;
 
    /*Set Branch Addresses*/
 
@@ -58,8 +59,8 @@ void nsig_copy()
    ww->SetBranchAddress("ete1", &ete1);
    tt->SetBranchAddress("ete1", &ete1); */
 
-   const char *var = "(ete1) && (ptm1) && (memu) && (dlrm1e1) && (nnej)";
-TCut cut = "(ete1>=10 && ete1<=30) && (ptm1>=5 && ptm1<=40) && (memu>=25 && memu<=70) && (dlrm1e1>=3.1 && dlrm1e1<=3.8) && (nnej<=1)";
+   const char *var = "(ete1) && (ptm1) && (memu) && (dlrm1e1) && (nnej) && (met4)";
+TCut cut = "(ete1>=10 && ete1<=30) && (ptm1>=5 && ptm1<=40) && (memu>=25 && memu<=70) && (dlrm1e1>=3.1 && dlrm1e1<=3.8) && (met4>=10 && met4<=35) && (nnej<=1)";
 
 int n_ztt = ztt->GetEntries(cut);
 int n_gamma = gamma->GetEntries(cut);
